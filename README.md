@@ -17,8 +17,11 @@ require 'fileutils'
 
 api_key = ENV['VOICE_TEXT_API_KEY']
 vt = VoiceText.new(api_key)
-file = vt.download(text: 'おはようございます', speaker: 'hikari')
+file = vt.text_to_speech('おはようございます')
 FileUtils.move(file, "./voice.wav")
+
+file = vt.text_to_speech('おはようございます', speaker: :hikari, emotion: :anger, pitch: 200)
+FileUtils.move(file, "./voice_hikari_in_anger.wav")
 ```
 
 ## Contributing
