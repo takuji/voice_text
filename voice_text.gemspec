@@ -7,10 +7,10 @@ Gem::Specification.new do |spec|
   spec.name          = "voice_text"
   spec.version       = VoiceText::VERSION
   spec.authors       = ["Takuji Shimokawa"]
-  spec.email         = ["shimokawa@soba-project.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.email         = ["takuji.shimokawa@gmail.com"]
+  spec.description   = %q{A client library for Voice Text Web API (https://cloud.voicetext.jp/webapi)}
+  spec.summary       = %q{A client library for Voice Text Web API (https://cloud.voicetext.jp/webapi)}
+  spec.homepage      = "https://github.com/takuji/voice_text"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
