@@ -1,6 +1,5 @@
 # coding: utf-8
 require 'net/http'
-require 'openssl'
 require 'tempfile'
 require 'voice_text/version'
 
@@ -52,7 +51,6 @@ class VoiceText
     req.set_form_data params
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = true
-    http.verify_mode = OpenSSL::SSL::VERIFY_NONE
     http.start do |h|
       res = h.request(req)
       if res.code == '200'

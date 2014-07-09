@@ -4,11 +4,10 @@ $LOAD_PATH.push('./lib')
 require 'voice_text'
 require 'fileutils'
 
-api_key = ENV['VOICE_TEXT_API_KEY']
-
-vt = VoiceText.new(api_key)
-
 FileUtils.mkdir('voices') unless File.exist?('voices')
+
+api_key = ENV['VOICE_TEXT_API_KEY']
+vt = VoiceText.new(api_key)
 
 text = '我々は一人の英雄を失った。しかし、これは敗北を意味するのか？否！始まりなのだ！ '
 
