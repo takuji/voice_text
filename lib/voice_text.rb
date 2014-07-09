@@ -43,6 +43,8 @@ class VoiceText
     download(params)
   end
 
+  private
+
   def download(params)
     uri = URI("https://api.voicetext.jp/v1/tts")
     req = Net::HTTP::Post.new(uri.request_uri)
@@ -60,8 +62,6 @@ class VoiceText
       end
     end
   end
-
-  private
 
   def save_response(res)
     temp_file = Tempfile.new('voice_text')
