@@ -11,6 +11,7 @@ Clone this repository.
 ## Usage
 
 ```ruby
+# coding: utf-8
 require 'voice_text'
 require 'fileutils'
 
