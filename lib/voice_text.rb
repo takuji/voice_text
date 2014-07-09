@@ -34,7 +34,7 @@ class VoiceText
     @api_key = api_key
   end
 
-  def text_to_speech(text, options)
+  def text_to_speech(text, options={})
     params = DEFAULT_OPTIONS.merge(options).select{|k,v| v != nil}
     params[:text] = text
     if params[:speaker] == :show && params[:emotion]
