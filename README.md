@@ -1,24 +1,24 @@
 # VoiceText
 
-TODO: Write a gem description
+A client library for Voice Text Web API.
+
+https://cloud.voicetext.jp/webapi
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'voice_text'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install voice_text
+Clone this repository.
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'voice_text'
+require 'fileutils'
+
+api_key = ENV['VOICE_TEXT_API_KEY']
+vt = VoiceText.new(api_key)
+file = vt.download(text: 'おはようございます', speaker: 'hikari')
+FileUtils.move(file, "./voice.wav")
+```
 
 ## Contributing
 
